@@ -1,0 +1,39 @@
+<h2>im from twoWayBinding.html</h2>
+<input type="text" ng-model="A">
+<input type="text" ng-model="B">
+<p>
+    The sum of two numbers = {{parseInt(A)+parseInt(B)}}
+</p>
+
+
+<ul>
+    <li ng-repeat="menu in menus">{{menu}}</li>
+</ul>
+
+<input type="text" ng-model="searchstudent">
+<select ng-model="sortBy">
+    <option value="-name>"
+</select>
+<table id="studentTable" class="table table-bordered table-striped">
+        <tr>
+            <th> Names</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>English</th>
+            <th>German</th>
+            <th>French</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="student in students|filter:searchstudent">
+            <td>{{student.name}}</td>
+            <td>{{student.maths}}</td>
+            <td>{{student.science}}</td>
+            <td>{{student.english}}</td>
+            <td>{{student.german}}</td>
+            <td>{{student.french}}</td>
+            <td><button class="btn btn-warning">Edit</button>
+            <button class="btn btn-danger">Delete</button></td>
+        </tr>
+        
+    </table> 
+    
